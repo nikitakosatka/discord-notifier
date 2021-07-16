@@ -99,7 +99,7 @@ async def start(message):
 @disp.message_handler(commands=["stop"])
 async def stop(message):
     await client.close()
-    await bot.send_message("\U0001F534 Наблюдение остановлено.")
+    await bot.send_message(message.chat.id, "\U0001F534 Наблюдение остановлено.")
 
 
 @disp.message_handler(commands=["token"])
